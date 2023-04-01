@@ -29,7 +29,7 @@ namespace projektos
                 if (option == 1)
                 {
                     Console.WriteLine("Úhlová rychlost: ? ");
-                    Console.WriteLine("obvodová rychlost: " + value1);
+                    Console.WriteLine("obvodová rychlost : " + value1);
                     Console.WriteLine("poloměr: " + value2);
                     hodnota1 = double.Parse(Console.ReadLine());
                     if (Math.Abs(hodnota1 - value1 / value2) < 0.1)
