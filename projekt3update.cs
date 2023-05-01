@@ -37,19 +37,95 @@ class Program
                 case 1:
                     Console.Write($"{Domaci} se otáčí obvodovou rychlostí {value2}cm/s s poloměrem o velikosti {value1}cm. Vypočtěte jeho úhlovou rychlost. ");
                     double answer1 = double.Parse(Console.ReadLine());
-                    Console.WriteLine(Math.Abs(answer1 - value1 / value2) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď :( ({ Math.Round(value1 / value2, 1)} je správny výsledek, používáme vzorec:ω = v/r)");
+                    Console.WriteLine("Chcete nápovědu? ano/ne");
+                    string input1 = Console.ReadLine();
+
+                    if (input1.ToLower() == "ano")
+                    {
+                        Console.WriteLine("používáme vzorec:v = r * ω");
+                        Console.WriteLine($"V tomto případě je v = {value2}cm/s a poloměr je r = {value1}cm");
+                        Console.WriteLine("Chcete vypočítat odpověď sami? ano/ne");
+                        string input2 = Console.ReadLine();
+
+                        if (input2.ToLower() == "ano")
+                        {
+                            Console.WriteLine("Zadejte svou odpověď:");
+                            double userAnswer = double.Parse(Console.ReadLine());
+                            Console.WriteLine(Math.Abs(userAnswer - value1 / value2) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď: {Math.Round(value1 / value2, 1)} je správny výsledek, používáme vzorec: ω = v/r");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Správná odpověď: {Math.Round(value1 / value2, 1)} je správny výsledek, používáme vzorec: ω = v/r");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Math.Abs(answer1 - value1 / value2) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď: {Math.Round(value1 / value2, 1)} je správny výsledek, používáme vzorec: ω = v/r");
+                    }
                     break;
 
                 case 2:
-                    Console.Write($"{nahodnyDopravniProstredek} se otáčí úhlovou rychlostí o velikosti {value3} rad/s a obvodovou rychlostí o velikosti {value2} cm/s. Vypočtěte poloměr tohoto kola. ");
+                    Console.Write($"Auto jedoucí rychlostí {value2}km/h se dostává do zatáčky s poloměrem {value1}m. Vypočtěte nutnou hodnotu bočního zrychlení auta. ");
                     double answer2 = double.Parse(Console.ReadLine());
-                    Console.WriteLine(Math.Abs(answer2 - value2 / value3) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď :( ({Math.Round(value2 / value3, 1)} je správny výsledek, používáme vzorec:r = v/ω)");
+                    Console.WriteLine("Chcete nápovědu? ano/ne");
+                    string input3 = Console.ReadLine();
+
+                    if (input3.ToLower() == "ano")
+                    {
+                        Console.WriteLine("používáme vzorec:a = v^2 / r");
+                        Console.WriteLine($"V tomto případě je r = {value1}m a v = {value2}km/h");
+
+                        // Pokud uživatel požádal o nápovědu, počkáme na další vstup uživatele, aby se ověřilo, zda chtějí vypočítat odpověď sami nebo ne
+                        Console.WriteLine("Chcete vypočítat odpověď sami? ano/ne");
+                        string input5 = Console.ReadLine();
+
+                        if (input5.ToLower() == "ano")
+                        {
+                            Console.WriteLine("Zadejte svou odpověď:");
+                            double userAnswer = double.Parse(Console.ReadLine());
+                            Console.WriteLine(Math.Abs(userAnswer - Math.Pow(value2 * 1000 / 3600, 2) / value1) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď: {Math.Round(Math.Pow(value2 * 1000 / 3600, 2) / value1, 1)} je správný výsledek, používáme vzorec: a = v^2 / r");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Správná odpověď: {Math.Round(Math.Pow(value2 * 1000 / 3600, 2) / value1, 1)} je správný výsledek, používáme vzorec: a = v^2 / r");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Math.Abs(answer2 - Math.Pow(value2 * 1000 / 3600, 2) / value1) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď: {Math.Round(Math.Pow(value2 * 1000 / 3600, 2) / value1, 1)} je správný výsledek, používáme vzorec: a = v^2 / r");
+                    }
                     break;
 
                 case 3:
                     Console.Write($"Gramofonová deska s poloměrem o velikosti {value1}cm se otáčí s úhlovou rychlostí {value3}rad/s. Vypočtěte obvodovou rychlost gramofonní desky. ");
                     double answer3 = double.Parse(Console.ReadLine());
-                    Console.WriteLine(Math.Abs(answer3 - value1 * value2) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď :( ({Math.Round(value1 * value3, 1)} je správný výsledek, používáme vzorec:v = r * ω)");
+                    Console.WriteLine("Chcete nápovědu? ano/ne");
+                    string input4 = Console.ReadLine();
+
+                    if (input4.ToLower() == "ano")
+                    {
+                        Console.WriteLine("používáme vzorec:v = r * ω");
+                        Console.WriteLine($"V tomto případě je poloměr r = {value1}cm a úhlová rychlost je ω = {value3}rad/s");
+
+                        // Pokud uživatel požádal o nápovědu, počkáme na další vstup uživatele, aby se ověřilo, zda chtějí vypočítat odpověď sami nebo ne
+                        Console.WriteLine("Chcete vypočítat odpověď sami? ano/ne");
+                        string input2 = Console.ReadLine();
+
+                        if (input2.ToLower() == "ano")
+                        {
+                            Console.WriteLine("Zadejte svou odpověď:");
+                            double userAnswer = double.Parse(Console.ReadLine());
+                            Console.WriteLine(Math.Abs(userAnswer - value1 * value3) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď: {Math.Round(value1 * value3, 1)} je správný výsledek, používáme vzorec: v = r * ω");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Správná odpověď: {Math.Round(value1 * value3, 1)} je správný výsledek, používáme vzorec: v = r * ω");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Math.Abs(answer3 - value1 * value3) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď: {Math.Round(value1 * value3, 1)} je správný výsledek, používáme vzorec: v = r * ω");
+                    }
                     break;
             }
 
