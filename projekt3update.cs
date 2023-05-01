@@ -49,7 +49,7 @@ class Program
 
                         if (input2.ToLower() == "ano")
                         {
-                            Console.WriteLine("Zadejte svou odpověď:");
+                            Console.WriteLine("Zadejte svou odpoveď:");
                             double userAnswer = double.Parse(Console.ReadLine());
                             Console.WriteLine(Math.Abs(userAnswer - value1 / value2) < 0.1 ? "Správná odpověď!" : $"Špatná odpověď: {Math.Round(value1 / value2, 1)} je správny výsledek, používáme vzorec: ω = v/r");
                         }
