@@ -8,13 +8,55 @@ Program také obsahuje nápovědu, která uživatelům poskytuje informace o fyz
 
 
 # Popis použitých technologií:
-Program je napsán v jazyce C#. Používá se zde standardní knihovna .NET Framework pro práci s výpočty. Program využívá také třídu Random pro generování náhodných čísel.
+Tento kód je napsán v programovacím jazyce C# a využívá .NET frameworku.
+
+Hlavní třída je nazvaná Program a obsahuje metodu Main, která je vstupním bodem programu.
+
+Pro generování náhodných hodnot se využívá třída Random, která je součástí .NET frameworku.
+
+Pro práci s matematickými funkcemi se využívá třída Math, která také patří do .NET frameworku. Konkrétně se používají funkce Math.Round a Math.Pow.
+
+Program obsahuje smyčku while, která opakuje generování náhodných hodnot a zobrazuje uživateli úkoly, které musí vyřešit.
+
+Pro práci s uživatelským vstupem a výstupem se využívá třída Console, která také patří do .NET frameworku.
+
+Celý kód je napsán v jazyce C# a běží v prostředí .NET frameworku, takže kód je závislý na této technologii.
 
 #  Stručný popis jak to funguje uvnitř:
-Program generuje náhodné úlohy, které uživatel musí vyřešit. Úlohy obsahují různé fyzikální výpočty, jako jsou rychlost, zrychlení, úhlová rychlost, síla, práce, energie a další. Uživatel může využít nápovědu, která poskytuje vzorce a principy pro výpočet dané úlohy. Po zadání odpovědi program vyhodnotí, zda je odpověď správná nebo špatná.
+Tento kód je konzolová aplikace, která generuje matematické otázky, týkající se úhlových rychlostí, bočních zrychlení, poloměrů a rychlosti rotace objektů. Aplikace se skládá z několika hlavních prvků:
+
+Random - třída, která generuje náhodná čísla.
+
+double - datový typ, který umožňuje práci s desetinnými čísly.
+
+string[] - datový typ, který umožňuje práci s řetězci.
+
+switch - příkaz, který umožňuje testování více podmínek.
+
+Console.ReadLine() - příkaz, který čte vstup uživatele z konzole.
+
+if - příkaz, který umožňuje testování podmínek.
+
+while - příkaz, který opakuje blok kódu, dokud je splněna určitá podmínka.
+
+Po spuštění programu se aplikace začne opakovat v nekonečné smyčce, dokud uživatel neukončí program. V každém průchodu smyčkou se vygenerují náhodné hodnoty pro poloměry, rychlosti a objekty, ke kterým se vztahují matematické otázky. Následně se pomocí switch konstrukce vybere náhodná matematická otázka a na základě toho se vypočítá správná odpověď.
+
+Pokud uživatel potřebuje nápovědu, aplikace mu poskytne informace o použitých vzorcích a vypočítá správnou odpověď. Pokud uživatel odpoví správně, aplikace mu to sdělí a pokud odpoví špatně, aplikace mu řekne, jaká byla správná odpověď. Pokud uživatel zadá chybný vstup, aplikace mu to řekne a požádá ho o správný vstup.
 
 #  Návod na použití projektu
-Po spuštění programu uživatel získá náhodnou úlohu z oblasti fyziky a matematiky. Uživatel musí vyřešit úlohu a zadat odpověď. Program vyhodnotí odpověď a zobrazí uživateli, zda je odpověď správná nebo špatná. Pokud uživatel potřebuje nápovědu, může využít nápovědu, která poskytuje vzorce a principy pro výpočet dané úlohy.
+Tento kód představuje interaktivní program pro procvičování výpočtů úhlové rychlosti a bočního zrychlení v souvislosti s fyzikálními situacemi, jako je například otáčení objektů kolem osy nebo průjezd vozidla zatáčkou. Program generuje náhodné situace a zadává uživateli otázky, aby vypočetl odpovídající hodnoty.
+
+Pro použití tohoto programu postupujte následovně:
+
+Otevřete vývojové prostředí s podporou jazyka C#.
+Zkopírujte kód do nového projektu.
+Upravte kód podle svých potřeb, například přidáním dalších fyzikálních situací nebo upravením seznamu předmětů v poli Domacnost.
+Spusťte program.
+Program vygeneruje náhodnou fyzikální situaci a zobrazí výzvu, aby uživatel vypočetl odpovídající hodnoty.
+Uživatel může vyžádat nápovědu pro výpočet odpovědi pomocí vzorce a poté zadat odpověď.
+Pokud je odpověď správná, program zobrazí upozornění o správnosti odpovědi.
+Pokud je odpověď špatná, program zobrazí správnou odpověď a upozornění na špatnost odpovědi uživatele.
+Program opakuje kroky 5 až 8, dokud uživatel nezadá "ne" jako odpověď na dotaz "Chcete pokračovat v procvičování?".
 
 #  Možný rozvoj v budoucnu / Popis reálného využití projektu:
 Tento projekt může sloužit jako učební pomůcka pro studenty fyziky nebo mechaniky, kteří se učí různé fyzikální a matematické koncepty a chtějí si vyzkoušet své znalosti pomocí praktických příkladů. Projekt by mohl být dále rozšířen o další vzorce a příklady, aby obsahoval více témat a poskytoval užitečné nástroje pro výuku a procvičování fyzikálních konceptů.
