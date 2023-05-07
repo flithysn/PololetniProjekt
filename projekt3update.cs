@@ -14,28 +14,16 @@ class Program
             double value2 = Math.Round(random.NextDouble() * 26 + 83, 1);
             double value3 = Math.Round(random.NextDouble() * 18 + 213, 1);
 
-            string[] Domacnost = { "Válec v pračce", "Gramofonní deska", "Odšťavňovač", "Vystavený talíř", "Google Maps Kamera 3000", "Vinylová deska", "Ručička na hodinách" };
+            string[] Domacnost = { "Válec v pračce", "Gramofonní deska", "Odšťavňovač", "Vystavený talíř", "Google Maps Kamera 3000", "Vinylová deska", "Ručička na hodinách" , "Zadní kolo auta", "Zašpiněné kolo vlaku", "Přední vrtule letadla", "Kapitánův radar na loďi", "Přední kolo motorky", "Malé kolo dětského scooteru", "Rotovací mechanismus bicyklu", "Velká vrtule helikoptéry" , "střed turbíny", "Čerstvé umyté kolo vlaku", "Záložná vrtule helikoptéry, která se náhle začala otáčet, ", "Malá ručička na dětských hodinkách", "DVD Harryho Pottera", "CD" };
 
             Random rmd = new Random();
             int cislo = rmd.Next(Domacnost.Length);
             string Domaci = Domacnost[cislo];
 
-            string[] dopravniProstredek = { "Zadní kolo auta", "Zašpiněné kolo vlaku", "Přední vrtule letadla", "Kapitánův radar na loďi", "Přední kolo motorky", "Malé kolo dětského scooteru", "Rotovací mechanismus bicyklu", "Velká vrtule helikoptéry" };
-
-            Random rnd = new Random();
-            int index = rnd.Next(dopravniProstredek.Length);
-            string nahodnyDopravniProstredek = dopravniProstredek[index];
-
-            string[] nahodnost = { "střed turbíny", "Čerstvé umyté kolo vlaku", "Záložná vrtule helikoptéry, která se náhle začala otáčet, ", "Malá ručička na dětských hodinkách", "DVD Harryho Pottera", "CD" };
-
-            Random rdm = new Random();
-            int nahoda = rdm.Next(nahodnost.Length);
-            string nahodnakulatost = nahodnost[nahoda];
-
             switch (option)
             {
                 case 1:
-                    Console.Write($"{Domaci} se otáčí obvodovou rychlostí {value2}cm/s s poloměrem o velikosti {value1}cm. Vypočtěte jeho úhlovou rychlost. ");
+                    Console.Write($"{Domaci} se otáčí obvodovou rychlostí {value2}cm/s s poloměrem o velikosti {value1}cm. Vypočtěte jeho úhlovou rychlost. Pokud chcete nápovědu, tak napište jakékoli číslo");
                     double answer1 = double.Parse(Console.ReadLine());
                     Console.WriteLine("Chcete nápovědu? ano/ne");
                     string input1 = Console.ReadLine();
@@ -65,7 +53,7 @@ class Program
                     break;
 
                 case 2:
-                    Console.Write($"Auto jedoucí rychlostí {value2}km/h se dostává do zatáčky s poloměrem {value1}m. Vypočtěte nutnou hodnotu bočního zrychlení auta. ");
+                    Console.Write($"{Domaci} s rychlostí {value2}km/h se dostává do zatáčky s poloměrem {value1}m. Vypočtěte nutnou hodnotu bočního zrychlení auta. Pokud chcete nápovědu, tak napište jakékoli číslo ");
                     double answer2 = double.Parse(Console.ReadLine());
                     Console.WriteLine("Chcete nápovědu? ano/ne");
                     string input3 = Console.ReadLine();
@@ -74,8 +62,6 @@ class Program
                     {
                         Console.WriteLine("používáme vzorec:a = v^2 / r");
                         Console.WriteLine($"V tomto případě je r = {value1}m a v = {value2}km/h");
-
-                        // Pokud uživatel požádal o nápovědu, počkáme na další vstup uživatele, aby se ověřilo, zda chtějí vypočítat odpověď sami nebo ne
                         Console.WriteLine("Chcete vypočítat odpověď sami? ano/ne");
                         string input5 = Console.ReadLine();
 
@@ -97,7 +83,7 @@ class Program
                     break;
 
                 case 3:
-                    Console.Write($"Gramofonová deska s poloměrem o velikosti {value1}cm se otáčí s úhlovou rychlostí {value3}rad/s. Vypočtěte obvodovou rychlost gramofonní desky. ");
+                    Console.Write($"{Domaci} s poloměrem o velikosti {value1}cm se otáčí s úhlovou rychlostí {value3}rad/s. Vypočtěte obvodovou rychlost gramofonní desky. Pokud chcete nápovědu, tak napište jakékoli číslo ");
                     double answer3 = double.Parse(Console.ReadLine());
                     Console.WriteLine("Chcete nápovědu? ano/ne");
                     string input4 = Console.ReadLine();
@@ -107,7 +93,7 @@ class Program
                         Console.WriteLine("používáme vzorec:v = r * ω");
                         Console.WriteLine($"V tomto případě je poloměr r = {value1}cm a úhlová rychlost je ω = {value3}rad/s");
 
-                        // Pokud uživatel požádal o nápovědu, počkáme na další vstup uživatele, aby se ověřilo, zda chtějí vypočítat odpověď sami nebo ne
+                     
                         Console.WriteLine("Chcete vypočítat odpověď sami? ano/ne");
                         string input2 = Console.ReadLine();
 
