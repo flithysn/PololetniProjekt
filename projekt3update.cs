@@ -10,11 +10,11 @@ class Program
         while (repeat)
         {
             int option = random.Next(1, 4);
-            double value1 = Math.Round(random.NextDouble() * 1 + 28, 1);
+            double value1 = Math.Round(random.NextDouble() * 1 + 37, 1);
             double value2 = Math.Round(random.NextDouble() * 50 + 25, 1);
             double value3 = Math.Round(random.NextDouble() * 9 + 14, 1);
 
-            string[] Domacnost = { "Válec v pračce", "Gramofonní deska", "Odšťavňovač", "Vystavený talíř", "Google Maps Kamera 3000", "Vinylová deska", "Ručička na hodinách" , "Zadní kolo auta", "Zašpiněné kolo vlaku", "Přední vrtule letadla", "Kapitánův radar na loďi", "Přední kolo motorky", "Malé kolo dětského scooteru", "Rotovací mechanismus bicyklu", "Velká vrtule helikoptéry" , "střed turbíny", "Čerstvé umyté kolo vlaku", "Záložná vrtule helikoptéry, která se náhle začala otáčet, ", "Malá ručička na dětských hodinkách", "DVD Harryho Pottera", "CD" };
+            string[] Domacnost = { "Válec v pračce", "Gramofonní deska", "Odšťavňovač", "Vystavený talíř", "Google Maps Kamera 3000", "Vinylová deska", "Ručička na hodinách", "Zadní kolo auta", "Zašpiněné kolo vlaku", "Přední vrtule letadla", "Kapitánův radar na loďi", "Přední kolo motorky", "Malé kolo dětského scooteru", "Rotovací mechanismus bicyklu", "Velká vrtule helikoptéry", "střed turbíny", "Čerstvé umyté kolo vlaku", "Záložná vrtule helikoptéry, která se náhle začala otáčet, ", "Malá ručička na dětských hodinkách", "DVD Harryho Pottera", "CD" };
 
             Random rmd = new Random();
             int cislo = rmd.Next(Domacnost.Length);
@@ -60,7 +60,7 @@ class Program
 
                     if (input3.ToLower() == "ano")
                     {
-                        Console.WriteLine("používáme vzorec:a = v^ω / r");
+                        Console.WriteLine("používáme vzorec:a = v * ω / r");
                         Console.WriteLine($"V tomto případě je r = {value3}rad/s a v = {value2}km/h, nezapomeňte převést km/h na m/s !");
                         Console.WriteLine("Chcete vypočítat odpověď sami? ano/ne");
                         string input5 = Console.ReadLine();
@@ -83,17 +83,17 @@ class Program
                     break;
 
                 case 3:
-                    Console.Write($"{Domaci} s poloměrem o velikosti {value1}cm se otáčí s úhlovou rychlostí {value3}rad/s. Vypočtěte obvodovou rychlost gramofonní desky.");
+                    Console.Write($"{Domaci} s poloměrem o velikosti {value1}cm se otáčí s úhlovou rychlostí {value3}rad/s. Vypočtěte obvodovou rychlosty.");
                     double answer3 = double.Parse(Console.ReadLine());
                     Console.WriteLine("Chcete nápovědu? ano/ne");
                     string input4 = Console.ReadLine();
-                        
+
                     if (input4.ToLower() == "ano")
                     {
                         Console.WriteLine("používáme vzorec:v = r * ω");
                         Console.WriteLine($"V tomto případě je poloměr r = {value1}cm a úhlová rychlost je ω = {value3}rad/s");
 
-                     
+
                         Console.WriteLine("Chcete vypočítat odpověď sami? ano/ne");
                         string input2 = Console.ReadLine();
 
