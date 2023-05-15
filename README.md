@@ -36,7 +36,7 @@ Pro práci s uživatelským vstupem a výstupem se využívá třída Console, k
 Celý kód je napsán v jazyce C# a běží v prostředí .NET frameworku, takže kód je závislý na této technologii.
 
 #  Stručný popis jak to funguje uvnitř:
-Tento kód je konzolová aplikace, která generuje matematické otázky, týkající se úhlových rychlostí, bočních zrychlení, poloměrů a rychlosti rotace objektů. Aplikace se skládá z několika hlavních prvků:
+Tento kód je konzolová aplikace, která generuje matematické otázky, týkající se úhlových rychlostí, poloměrů a rychlosti rotace objektů. Aplikace se skládá z několika hlavních prvků:
 
 Random - třída, která generuje náhodná čísla.
 
