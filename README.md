@@ -58,7 +58,7 @@ Pokud uživatel potřebuje nápovědu, aplikace mu poskytne informace o použit�
 
 #  Návod na použití projektu
 
-Tento kód je interaktivní program pro procvičování výpočtů úhlové rychlosti a bočního zrychlení v souvislosti s fyzikálními situacemi.
+Tento kód je interaktivní program pro procvičování výpočtů úhlové rychlosti v souvislosti s fyzikálními situacemi.
 
 Program generuje náhodné situace a zadává uživateli otázky, aby vypočetl odpovídající hodnoty.
 
